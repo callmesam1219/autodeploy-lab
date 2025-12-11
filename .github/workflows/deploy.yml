@@ -17,9 +17,10 @@ jobs:
       - name: Deploy code
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.HOST }}         
-          username: ${{ secrets.USERNAME }}  
+          host: 20.216.57.146
+          username: Lovable_dev
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
           script: |
             cd /home/Lovable_dev/autodeploy-lab
             git pull origin main
